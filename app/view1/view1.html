@@ -1,0 +1,23 @@
+<table border="1">
+    <thead>
+        <tr>
+            <th>NAME</th>
+            <th>EMAIL</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="customer in allCustomers"
+            ng-click="showDetails(customer)">
+            <td>{{customer.name}}</td>
+            <td>{{customer.email}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul ng-if="selectedCustomer != null">
+    <li>ID: {{selectedCustomer.customerId}}</li>
+    <li>NAME: {{selectedCustomer.name}}</li>
+    <li>PHONE: {{selectedCustomer.phone}}</li>
+    <li>EMAIL: {{selectedCustomer.email}}</li>
+</ul>
+
